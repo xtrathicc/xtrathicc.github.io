@@ -1,0 +1,59 @@
+{
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@web/dev-server": "^0.4.6",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0"
+  },
+  "scripts": {
+    "start": "web-dev-server --node-resolve --open --watch"
+  },
+  "eslintConfig": {
+    "rules": {
+      "indent": 0,
+      "arrow-parens": 0,
+      "operator-linebreak": 0,
+      "linebreak-style": 0,
+      "object-curly-newline": 0,
+      "implicit-arrow-linebreak": 0,
+      "function-paren-newline": 0,
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "only-multiline",
+          "objects": "only-multiline",
+          "imports": "only-multiline",
+          "exports": "only-multiline",
+          "functions": "never"
+        }
+      ],
+      "comma-style": 0,
+      "no-param-reassign": [
+        2,
+        {
+          "props": false
+        }
+      ]
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/*.ts",
+          "**/*.tsx"
+        ],
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+          "@typescript-eslint"
+        ],
+        "extends": [
+          "plugin:@typescript-eslint/eslint-recommended",
+          "plugin:@typescript-eslint/recommended"
+        ]
+      }
+    ],
+    "extends": [
+      "@open-wc/eslint-config",
+      "plugin:cypress/recommended"
+    ]
+  }
+}

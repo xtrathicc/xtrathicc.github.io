@@ -1,0 +1,2 @@
+npm i --save-dev @web/dev-server
+npm init @eslint/config@latest
